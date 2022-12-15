@@ -1,0 +1,61 @@
+<div class="row">
+
+
+    <div class="col-5">
+        <form [formGroup]="userForm" (ngSubmit)="sabmit()">
+    <!-- Name input -->
+    <div class="form-outline  " >
+      <input type="text" id="form5Example1" class="form-control" formControlName="name" name="name" />
+      <label class="form-label" for="form5Example1">Name</label>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form5Example2" class="form-control" formControlName="email" name="email"  />
+      <label class="form-label" for="form5Example2">Email address</label>
+    </div>
+    <div class="form-outline mb-4">
+        <input type="text" id="form5Example2" class="form-control" formControlName="adresse" name="adresse" />
+        <label class="form-label" for="form5Example2">adresse</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mb-4"  >Subscribe</button>
+
+</form>
+</div>
+    <!-- Submit button -->
+
+
+
+    <div class="col-5">
+  <div  >
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Adresse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let o of br , let l=index">
+          <th scope="row">{{l}}</th>
+          <td>{{o.name}}</td>
+          <td>{{o.email}}</td>
+          <td>{{o.adresse}}</td>
+          <td>{{o._id}}</td>
+          <td><button type="button" class="btn btn-danger" (click)=" deleteUser(o._id)">Delete</button></td>
+          <td><button type="button" class="btn btn-warning" (click)="update(o)" >Update</button></td>
+
+
+
+
+      </tbody>
+  </table>
+
+</div>
+    </div>
+
+
+</div>
+

@@ -1,0 +1,16 @@
+<div class="z">
+<div class="input-group mb-9">
+  <input type="text" class="form-control" placeholder="Votre Note" aria-label="Note" aria-describedby="basic-addon2" [(ngModel)]="name" >
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="setValue()">Send</button>
+  </div>
+</div>
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Note</div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">{{tab | json}}</p>
+    <a  class="btn btn-primary" (click)="clear()">Delete</a>
+    {{c}}
+  </div>
+</div>
